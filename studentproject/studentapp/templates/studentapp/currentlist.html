@@ -1,0 +1,18 @@
+{% extends 'studentapp/base.html' %}
+{% block content %}
+
+<h1>Student List</h1>
+
+<ul>
+
+  {% for student in students %}
+  <a href="{% url 'viewlist' student.id  %}">
+    <li><h3>Name: {{ student.name }} |
+      Subject : {{ student.subject }} |
+      Marks : {{ student.marks }}
+ </h3> </li>
+  {% endfor %}
+   </a>
+</ul>
+
+{% endblock %}

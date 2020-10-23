@@ -1,0 +1,21 @@
+{% extends 'studentapp/base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+
+<h1>Add Student Details </h1>
+
+
+<h2>{{ error }}</h2>
+<form class="" action=" " method="POST">
+{% csrf_token %}
+{% csrf_token %}
+{{ form.as_p }}
+
+<button type="submit"  name="create" class="buttoncreate create"> Add Details </button>
+{% csrf_token %}
+</form>
+</div>
+{% endblock %}

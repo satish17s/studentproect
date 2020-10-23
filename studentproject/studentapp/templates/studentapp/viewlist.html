@@ -1,0 +1,36 @@
+{% extends 'studentapp/base.html' %}
+
+{% block content %}
+
+<h2 id="tname">{{ student.name }}</h2>
+
+
+<h2>{{ error }}</h2>
+
+
+
+<form class="" action=" " method="POST">
+{% csrf_token %}
+{% csrf_token %}
+{{ form.as_p }}
+
+<div class="row">
+<div class="column">
+
+<button type="submit" class="buttonupdate update" name="update">Update</button>
+{% csrf_token %}
+</form>
+</div>
+
+
+  <div class="column">
+<form class="" action="{% url 'deletestudent' student.id %}" method="POST">
+{% csrf_token %}
+
+<button type="submit" class="buttondelete delete" name="delete">Delete</button>
+{% csrf_token %}
+</form>
+</div>
+</div>
+
+{% endblock %}
