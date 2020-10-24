@@ -52,12 +52,6 @@ def currentlist(request):
     return render(request,'studentapp/currentlist.html',{'students':students})
 
 
-# @login_required
-# def completedtodo(request):
-#     todos=Student.objects.filter(user=request.user,datecompleted__isnull=False).order_by('-datecompleted')
-#     return render(request,'studentapp/completedtodo.html',{'todos':todos})
-
-
 @login_required
 def viewlist(request,student_pk):
     student=get_object_or_404(Student,pk=student_pk,user=request.user)
